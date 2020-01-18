@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articlelist</title>
+</head>
+<body>
+    <h3>리스트입니다.</h3>
+
+    <div>
+        {% for article in articles %}
+        <div>
+            <p>제목: {{ article }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
