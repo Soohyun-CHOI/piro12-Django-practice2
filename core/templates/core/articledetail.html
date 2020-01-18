@@ -10,9 +10,10 @@
         <br /><br />
         <p>
             <span>{{ article.author }}<span>
-            </span>{{ article.created_at |time: }}</span>
+            </span>{{ article.created_at }}</span>
         </p>
         <h3>{{ article.content }}</h3>
+        <p><a href="{% url 'core:articlelist' %}">리스트</a></p>
     </div>
 </body>
 </html>

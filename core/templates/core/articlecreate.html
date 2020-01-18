@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articlecreate</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}  <!-- post 날릴 때 대부분 필요 -->
+        <label for="">제목
+            <input type="text" name="title">
+        </label>
+        <label for="">내용
+            <input type="text" name="content">
+        </label>
+        <label for="">저자
+            <input type="text" name="author">
+        </label>
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

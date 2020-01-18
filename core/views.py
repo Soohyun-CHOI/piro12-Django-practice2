@@ -21,3 +21,19 @@ def articledetial(request, pk):  # pk = 아이디 값
         "article": article
     }
     return render(request, "core/articledetail.html", ctx)
+
+
+def articlecreate(request):
+    if request.method == "POST":
+        title = request.POST["title"]
+        content = request.POST["content"]
+        author = request.POST["author"]
+
+        article = Article.objects.create(title=title, content=content, author=author)  # 인스턴스 만들고 save까지 한 번에 처리
+
+        ctx = {
+            "article": article
+        }
+
+        return render(request, "core/articlecreate.html", ctx)
+    return render(request, "core/articlecreate.html")

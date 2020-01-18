@@ -10,7 +10,10 @@
     <div>
         {% for article in articles %}
         <div>
-            <p>제목: {{ article }}</p>
+            <p>제목:
+                <a href="{% url 'core:articledetail' article.pk %}">{{ article }}</a>
+                <!-- core = app_name / articledetial = url path name -->
+            </p>
         </div>
         {% endfor %}
     </div>
